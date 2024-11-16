@@ -2,6 +2,7 @@ import React from "react";
 import { AiFillStar } from "react-icons/ai";
 import { BiShow } from "react-icons/bi";
 import { FaShareAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const NewsCard = ({ news }) => {
   const {
@@ -45,7 +46,9 @@ const NewsCard = ({ news }) => {
       {/* News Details */}
       <p className="text-sm text-gray-600 mb-4">
         {details.substring(0, 120)}...{" "}
-        <span className="text-blue-500">Read More</span>
+        <Link to={`/news/${news._id}`} className="text-blue-500">
+          Read More
+        </Link>
       </p>
 
       {/* Ratings and Views */}
